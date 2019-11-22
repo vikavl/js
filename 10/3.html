@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Частина 10.4</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script>
+      function year() {
+        var arr = document.form1.date3.value.split(".");
+        var num = Number(arr[2]);
+        var name;
+        var color = num % 10;
+        if (color == 0 || color == 1) {
+          name = "White";
+        }
+        if (color == 2 || color == 3) {
+          name = "Black";
+        }
+        if (color == 4 || color == 5) {
+          name = "Green";
+        }
+        if (color == 6 || color == 7) {
+          name = "Red";
+        }
+        if (color == 8 || color == 9) {
+          name = "Yellow";
+        }
+        var animal;
+        var num_1 = 1960;
+        var del = 12;
+        if (num < num_1) {
+          del = -12;
+        }
+        while (Math.abs(num_1 - num) >= 12) {
+          num_1 += del;
+        }
+        var yr = Math.abs(num_1 - num);
+        if (yr == 0) {
+          name += " Rat";
+        }
+        if (yr == 1) {
+          name += " Bull";
+        }
+        if (yr == 2) {
+          name += " Tiger";
+        }
+        if (yr == 3) {
+          name += " Rabbit";
+        }
+        if (yr == 4) {
+          name += " Dragon";
+        }
+        if (yr == 5) {
+          name += " Snake";
+        }
+        if (yr == 6) {
+          name += " Horse";
+        }
+        if (yr == 7) {
+          name += " Goat";
+        }
+        if (yr == 8) {
+          name += " Monkey";
+        }
+        if (yr == 9) {
+          name += " Coq";
+        }
+        if (yr == 10) {
+          name += " Dog";
+        }
+        if (yr == 11) {
+          name += " Pig";
+        }
+        document.form1.res3.value = name;
+      }
+    </script>
+  </head>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">9_2</a></li>
+    <li><a href="2.html">9_3</a></li>
+    <li><a href="3.html">9_4</a></li>
+  </ul>
+  <body class="bodi">
+    <form name="form1">
+      В східному календарі є 60-річний цикл із п’яти 12-річних підциклів.
+      Підцикли позначаються кольорами: зелений, червоний, жовтий, білий, чорний.
+      В кожному підциклі роки мають назви тварин: пацюка, корови, тигра, зайця,
+      дракона, змії, коня, вівці, мавпи, курки, собаки і свині. Наприклад, 1984
+      рік - рік зеленого пацюка - є початком чергового цикла. Написати сценарій,
+      який за заданою датою визначає назву року за східним календарем.
+      <br /><br />
+      Введіть дату: <input type="text" name="date3" /><br />
+      Назва року: <input type="text" name="res3" /><br />
+      <input type="button" value="Визначити" onclick="year()" /><br /><br />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>3_2</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      function maxval(obj) {
+        var k = 0;
+        var a = Number(obj.num1.value);
+        var b = Number(obj.num2.value);
+        var c = Number(obj.num3.value);
+        var d = Number(obj.num4.value);
+        var e = Number(obj.num5.value);
+        var m = a;
+
+        if (b > m) m = b;
+        if (c > m) m = c;
+        if (d > m) m = d;
+        if (e > m) m = e;
+
+        if (a == m) k += 1;
+        if (b == m) k += 1;
+        if (c == m) k += 1;
+        if (d == m) k += 1;
+        if (e == m) k += 1;
+        obj.res.value = k;
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">3_2</a></li>
+    <li><a href="2.html">3_3</a></li>
+    <li><a href="3.html">3_4</a></li>
+  </ul>
+  <BODY class="bodi">
+    <FORM name="form1">
+      Написати сценарій визначення кількості максимальних чисел для введеної
+      послідовності із п’яти чисел. <br /><br />
+      Число 1: <input type="text" size="8" name="num1" /><br />
+      Число 2: <input type="text" size="8" name="num2" /><br />
+      Число 3: <input type="text" size="8" name="num3" /><br />
+      Число 4: <input type="text" size="8" name="num4" /><br />
+      Число 5: <input type="text" size="8" name="num5" /><br />
+      К-сть максимальних значень =
+      <input type="text" size="8" name="res" /><br />
+      <input type="button" value="Визначити" onClick="maxval(form1)" />
+      <input type="reset" value="Очистити" />
+    </FORM>
+  </BODY>
+</HTML>

@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <script>
+      function validate(obj) {
+        var regName = /^[A-z]+ [A-z]+$/; //для укр букв
+        /*/^[А-Яа-я]+ [А-Яа-я]+$/*/ var name = obj.text1.value;
+        if (!regName.test(name)) {
+          alert("Введіть ім'я і прізвище ще раз у форматі Vlasenko Viktoria!");
+          obj.text1.focus();
+          return false;
+        } else {
+          alert("Вас звати - " + name + "!");
+          return true;
+        }
+      }
+      function ValidMail(obj) {
+        var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+        var myMail = obj.email.value;
+        var valid = re.test(myMail);
+        if (valid) alert("Ваша електронная адреса - " + myMail + "!");
+        else
+          alert(
+            "Введіть вашу електронну адресу ще раз у форматі jkit530@gmail.com!"
+          );
+        obj.email.focus();
+      }
+      function ValidPhone(obj) {
+        var re = /^\+380\d{3}\d{2}\d{2}\d{2}$/; //ukr number
+        var myPhone = obj.phone.value;
+        var valid = re.test(myPhone);
+        if (valid) alert("Ваш номер телефону - " + myPhone + "!");
+        else
+          output = alert(
+            "Введіть номер мобільного телефону ще раз у форматі +380961960323!"
+          );
+        obj.phone.focus();
+      }
+    </script>
+  </head>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="1.html">12 lab</a></li>
+  </ul>
+  <body class="bodi">
+    <form name="first">
+      Уточнити контроль коректності імені користувача на ваш розсуд. Уточнити
+      контроль коректності адреси електронної пошти на ваш розсуд. Уточнити
+      контроль коректності телефонного номеру на ваш розсуд.<br /><br />
+      Вкажіть Ваше ім’я:<br />
+      <input type="text" name="text1" />
+      <input
+        type="button"
+        name="button1"
+        value="Перевірка"
+        onClick="validate(first)"
+      /><br />
+      Вкажіть Вашу адресу e-mail:<br />
+      <input type="text" name="email" />
+      <input
+        type="button"
+        name="button2"
+        value="Перевірка"
+        onClick="ValidMail(first)"
+      /><br />
+      Вкажіть Ваш номер телефона:<br />
+      <input type="text" name="phone" />
+      <input
+        type="button"
+        name="button3"
+        value="Перевірка"
+        onClick="ValidPhone(first)"
+      />
+    </form>
+  </body>
+</html>

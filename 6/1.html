@@ -1,0 +1,80 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <TITLE>6</TITLE>
+    <script language="JavaScript">
+      function summ() {
+        let s = 0;
+        var arr = new Array(0, 0, 0, 0);
+        for (let j = 0; j < 3; j++) {
+          if (document.form1.elements[j].checked) {
+            arr[j] += Number(document.form1.elements[j].value);
+            for (let i = 3; i < 13; i++) {
+              if (document.form1.elements[i].checked) {
+                arr[j] += Number(document.form1.elements[i].value);
+              }
+            }
+          }
+          arr[3] += arr[j];
+        }
+        document.form1.ww.value =
+          "Вартість курсу ООП: " +
+          arr[0] +
+          " у.о.\nВартість курсу Теорія алгоритмів: " +
+          arr[1] +
+          " у.о.\nВартість курсу Основи програмування: " +
+          arr[2] +
+          " у.о.\nЗагальна вартість: " +
+          arr[3] +
+          " у.о.";
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <BODY class="bodi">
+    <FORM name="form1">
+      Написати сценарій обробки анкети слухача курсів. Користувач може обрати із
+      списку курсів конкретний курс, його тривалість, мову роботи з викладачем,
+      форму звітності. Залежно від цих параметрів визначається вартість окремого
+      курсу і вартість всього навчання. <br /><br />
+
+      Оберіть бажаний курс: <br />
+      <input type="checkbox" name="type" value="3000" />ООП<br />
+      <input type="checkbox" name="type" value="3000" />Теорія алгоритмів<br />
+      <input type="checkbox" name="type" value="3000" />Основи програмування<br />
+      Тривалість обраних курсів: <br />
+      <input type="checkbox" name="term" value="100" />1 місяць<br />
+      <input type="checkbox" name="term" value="200" />3 місяці<br />
+      <input type="checkbox" name="term" value="300" />6 місяців<br />
+      Мови роботи з викладачем: <br />
+      <input type="checkbox" name="lan" value="100" />українська<br />
+      <input type="checkbox" name="lan" value="200" />англійська<br />
+      <input type="checkbox" name="lan" value="300" />російська<br />
+      Форма звітності: <br />
+      <input type="checkbox" name="zvit" value="100" />електронна<br />
+      <input type="checkbox" name="zvit" value="200" />письмова<br />
+      <input type="checkbox" name="zvit" value="300" />усна<br />
+      <input
+        type="button"
+        value="Обрахувати вартість курсу"
+        onClick="summ()"
+      /><br /><br />
+      <textarea name="ww" rows="4" cols="50" value=""></textarea><br />
+      <input type="reset" value="Скасувати" />
+    </FORM>
+  </BODY>
+</HTML>

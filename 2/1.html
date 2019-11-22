@@ -1,0 +1,62 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <title>Частина 2.2</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      function getData(obj) {
+        var x1 = obj.x1.value;
+        var y1 = obj.y1.value;
+        var x2 = obj.x2.value;
+        var y2 = obj.y2.value;
+        var x3 = obj.x3.value;
+        var y3 = obj.y3.value;
+        var res = x1 * y2 + x2 * y3 + x3 * y1 - (y1 * x2 + y2 * x3 + y3 * x1);
+        obj.res.value = res;
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">2_2</a></li>
+    <li><a href="2.html">2_3</a></li>
+    <li><a href="3.html">2_4</a></li>
+  </ul>
+  <BODY class="bodi">
+    <FORM name="form1">
+      Написати сценарій обчислення площі трикутника (використати подію focus) за
+      заданими координатами трьох точок на площині. <br /><br />
+      1-а точка: <input type="text" name="x1" size="4" /><input
+        type="text"
+        name="y1"
+        size="4"
+      /><br />
+      2-а точка: <input type="text" name="x2" size="4" /><input
+        type="text"
+        name="y2"
+        size="4"
+      /><br />
+      3-я точка: <input type="text" name="x3" size="4" /><input
+        type="text"
+        name="y3"
+        size="4"
+      /><br />
+      Площа трикутника: <input type="text" name="res" size="6" /><br />
+      <input type="button" value="Знайти площу" onFocus="getData(form1)" />
+      <input type="reset" value="Очистити" />
+    </FORM>
+  </BODY>
+</HTML>

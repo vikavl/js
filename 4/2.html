@@ -1,0 +1,69 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <TITLE>4_3</TITLE>
+    <script>
+      function img(num, position) {
+        if (position == 1) {
+          document.images[num - 1].width *= 1.5;
+          document.images[num - 1].height *= 1.5;
+        } else {
+          document.images[num - 1].width = 250;
+          document.images[num - 1].height = 250;
+        }
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">4_2</a></li>
+    <li><a href="2.html">4_3</a></li>
+    <li><a href="3.html">4_4</a></li>
+  </ul>
+  <BODY class="bodi">
+    Написати сценарій картинки з "ефектом наближення", тобто збільшення розмірів
+    як реакція на попадання курсора в поле зображення (використовувати
+    властивості width і height). <br /><br />
+    <IMG
+      src="p11.jpg"
+      width="250"
+      height="250"
+      name="1"
+      alt="pic1"
+      onmouseover="img(1,1)"
+      onmouseout="img(1,0)"
+    />
+    <IMG
+      src="p22.jpg"
+      width="250"
+      height="250"
+      name="2"
+      alt="pic2"
+      onmouseover="img(2,1)"
+      onmouseout="img(2,0)"
+    />
+    <IMG
+      src="p33.jpg"
+      width="250"
+      height="250"
+      name="3"
+      alt="pic3"
+      onmouseover="img(3,1)"
+      onmouseout="img(3,0)"
+    />
+  </BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>11_2</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      var p = -1;
+      var i = 0;
+      var arr = new Array(5);
+      function multik() {
+        arr[0] = "p1.jpg";
+        arr[1] = "p2.jpg";
+        arr[2] = "p3.jpg";
+        arr[3] = "p4.jpg";
+        arr[4] = "p5.jpg";
+      }
+      function s() {
+        p = p + 1;
+        document.getElementById("mult").src = arr[p];
+        if (i != 20) {
+          i++;
+          setTimeout("s()", 1000);
+        } else {
+          i = 0;
+          return;
+        }
+        if (p == 4) p = -1;
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">11_2</a></li>
+    <li><a href="2.html">11_3</a></li>
+    <li><a href="3.html">11_4</a></li>
+  </ul>
+  <body class="bodi" onLoad="multik()">
+    <FORM name="form1">
+      Створити мультиплікацію з використанням масива. <br /><br />
+      <img id="mult" src="p1.jpg" width="400px" height="400px" /><br /><br />
+      <input type="button" value="Мультиплікація" onClick="s()" />
+    </FORM>
+  </body>
+</HTML>

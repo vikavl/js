@@ -1,0 +1,47 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <title>Частина 1</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script>
+      function plosha1(obj) {
+        (obj.kolo.value = 3), 14 * obj.r.value * obj.r.value;
+      }
+      function plosha2(obj) {
+        obj.gipoten.value = Math.sqrt(
+          obj.a.value * obj.a.value + obj.b.value * obj.b.value
+        );
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <BODY class="bodi">
+    <form name="form1">
+      Скласти сценарій обчислення площі круга за відомим радіусом. <br /><br />
+      Введіть радіус круга:
+      <input type="text" name="r" size="5" onChange="plosha1(form1)" /><br />
+      Площа круга:
+      <input type="text" name="kolo" size="5" /><br /><br />
+      Скласти сценарій обчислення гіпотенузи за відомими катетами. <br /><br />
+      Введіть перший катет: <input type="text" name="a" size="5" /><br />
+      Введіть другий катет:
+      <input type="text" name="b" size="5" onChange="plosha2(form1)" /><br />
+      Гіпотенуза:
+      <input type="text" name="gipoten" size="5" /><br />
+      <input type="reset" value="Очистити" />
+    </form>
+  </BODY>
+</HTML>

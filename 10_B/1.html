@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf=8" />
+    <title>10_2</title>
+    <link rel="stylesheet" href="../main.css" />
+    <script type="text/javascript">
+      function result(obj) {
+        var text = document.getElementById("text").value;
+        var Arr = text.split(/\s+/);
+        var temp = Arr.length;
+        obj.res.value = temp;
+      }
+    </script>
+  </head>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">10_2</a></li>
+    <li><a href="2.html">10_3</a></li>
+    <li><a href="3.html">10_4</a></li>
+  </ul>
+  <body class="bodi">
+    <form name="form1">
+      Встановлення кількості слів у тексті, заданому користувачем у відповідному
+      полі форми, де слова розділяються довільною кількістю пробілів.<br /><br />
+      Введіть текст: <br /><textarea col="35" rows="5" id="text"></textarea
+      ><br />
+      Кількість слів у даному тексті:
+      <input type="text" size="5" name="res" /><br />
+      <input type="button" value="Обчислити" onClick="result(form1)" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>11_3</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      function plusel(obj) {
+        var str = obj.arr.value;
+        var array = str.split(" ");
+        var i = 0,
+          count = 0;
+        while (i < array.length) {
+          if (array[i] >= 0) {
+            count++;
+          }
+          i += 1;
+        }
+        obj.res.value = count;
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">11_2</a></li>
+    <li><a href="2.html">11_3</a></li>
+    <li><a href="3.html">11_4</a></li>
+  </ul>
+  <BODY class="bodi">
+    <FORM name="forml">
+      Дано одномірний масив дійсних чисел. Написати сценарій визначення
+      кількості додатніх елементів масива. <br /><br />
+      Введіть масив дійсних значень:<br />
+      <textarea type="text" cols="40" rows="3" name="arr"></textarea><br />
+      Кількість додатніх елементів:
+      <input type="text" size="10" name="res" /><br />
+      <input type="button" value="Визначити" onClick="plusel(forml)" />
+      <input type="reset" value="Скасувати" />
+    </FORM>
+  </BODY>
+</HTML>

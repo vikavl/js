@@ -1,0 +1,43 @@
+ul.menu {
+  display: flex;
+  padding: 0px;
+  justify-content: center;
+}
+
+ul.menu li {
+  list-style: none;
+  padding: 10px;
+  border: 4px outset #20b2aa;
+  background-color: rgb(78, 157, 194);
+}
+
+ul.menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+.bodi {
+  background: Azure;
+  margin: 0;
+  text-align: center;
+}
+
+ul.menu-menu {
+  display: flex;
+  padding: 0px;
+  justify-content: center;
+}
+
+ul.menu-menu li {
+  list-style: none;
+  padding: 10px;
+  border: 4px outset #6481c0;
+  background-color: rgb(61, 164, 212);
+}
+
+ul.menu-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}

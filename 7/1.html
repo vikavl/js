@@ -1,0 +1,111 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>7_2</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      function change1() {
+        document.getElementById("mytable").style.background =
+          document.form1.data1.value;
+      }
+      function change2() {
+        document.getElementById("mytable").style.background =
+          "url(" + document.form1.data2.value + ")";
+      }
+      function change3() {
+        document.getElementById("row").style.background =
+          document.form1.data3.value;
+      }
+      function change4() {
+        document.getElementById("row").style.background =
+          "url(" + document.form1.data4.value + ")";
+      }
+      function change5() {
+        document.getElementById("row").style.background =
+          document.form1.color.value;
+      }
+      function reset_table() {
+        document.getElementById("mytable").style.background = "silver";
+        document.getElementById("row").style.background = "silver";
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">7_2</a></li>
+    <li><a href="2.html">7_3</a></li>
+  </ul>
+  <BODY class="bodi">
+    <CENTER>
+      <FORM name="form1">
+        Написати сценарій, який дозволяє вибрати для таблиці і її комірок або
+        колір фону, або фонове зображення, або і те і інше. Передбачити
+        можливість задання свого кольору фону для кожної комірки. <br /><br />
+        <TABLE border="3" bgcolor="silver" id="mytable" width="250">
+          <TR><TH>Колір</TH><TH>Картинка</TH><TH>Змінити ячейку</TH></TR>
+          <TR
+            ><TD valign="top">
+              <select
+                name="data1"
+                size="3"
+                onChange="change1(form1.data1.value)"
+              >
+                <option value="pink">Pink </option
+                ><option value="DodgerBlue">Blue </option
+                ><option value="yellow">Yellow </option>
+              </select></TD
+            >
+            <TD valign="top">
+              <select
+                name="data2"
+                size="3"
+                onChange="change2(form1.data2.value)"
+              >
+                <option value="p111.jpg">Pink sky </option>
+                <option value="p222.jpg">Blue sky </option>
+                <option value="p333.jpg">Purple sky </option>
+              </select></TD
+            >
+            <td valign="top" id="row">
+              <select
+                name="data3"
+                size="3"
+                onChange="change3(form1.data3.value)"
+              >
+                <option value="pink">Pink </option>
+                <option value="DodgerBlue">Blue </option>
+                <option value="yellow">Yellow </option></select
+              >
+              <select
+                name="data4"
+                size="3"
+                onChange="change4(form1.data4.value)"
+              >
+                <option value="p111.jpg">Pink sky </option>
+                <option value="p222.jpg">Blue sky </option>
+                <option value="p333.jpg">Purple sky </option>
+              </select>
+            </td>
+          </TR>
+        </TABLE>
+
+        Введіть колір:
+        <input type="text" name="color" size="15" onChange="change5()" /><br />
+        <input type="button" value="Скасувати" onClick="reset_table()" />
+      </FORM>
+    </CENTER>
+  </BODY>
+</HTML>

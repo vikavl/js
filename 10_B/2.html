@@ -1,0 +1,57 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>10_3</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      function changeWords(obj) {
+        var w1 = obj.data1.value;
+        var w2 = obj.data2.value;
+        var text = obj.textin.value;
+        var res = "";
+        obj.textout.value = text
+          .split(" ")
+          .map(elem => (elem === w1 ? w2 : elem))
+          .join(" ");
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">10_2</a></li>
+    <li><a href="2.html">10_3</a></li>
+    <li><a href="3.html">10_4</a></li>
+  </ul>
+  <body class="bodi">
+    <FORM name="form1">
+      Написати програму, в якій всі слова K замінюються словом L, де K і L -
+      задані слова, можливо різної довжини. <br /><br />
+      Введіть текст:<br />
+      <textarea name="textin" rows="5" cols="25"></textarea><br />
+
+      Введіть слово, що потребує заміни:
+      <input type="text" name="data1" size="8" /><br />
+
+      Введіть заміну:
+      <input type="text" name="data2" size="8" /><br />
+
+      Замінений текст:<br />
+      <textarea name="textout" rows="5" cols="25"></textarea><br /><br />
+      <input type="button" value="Замінити" onClick="changeWords(form1)" />
+      <input type="reset" value="Скасувати" />
+    </FORM>
+  </body>
+</HTML>

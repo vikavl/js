@@ -1,0 +1,100 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>7_3</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script language="JavaScript">
+      /*Написати сценарій, яки обчислить вартість майбутньої покупки для заданого списку продуктів, ціни за 
+		  одиницю товару і кількість екземплярів*/
+      var sum = 0;
+      var p;
+      var a;
+      function summury() {
+        p = Number(form1.product.value);
+        a = Number(form1.amount.value);
+        switch (p) {
+          case 1: {
+            sum += 25 * a;
+            break;
+          }
+          case 2: {
+            sum += 15 * a;
+            break;
+          }
+          case 3: {
+            sum += 20 * a;
+            break;
+          }
+        }
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">7_2</a></li>
+    <li><a href="2.html">7_3</a></li>
+  </ul>
+  <BODY class="bodi">
+    <CENTER>
+      <FORM name="form1">
+        Написати сценарій, яки обчислить вартість майбутньої покупки для
+        заданого списку продуктів, ціни за одиницю товару і кількість
+        екземплярів.<br /><br />
+        <table border="3" background="p.jpg" id="mytable" width="100">
+          <tr>
+            <th>Продукт</th>
+            <th>К-сть</th>
+          </tr>
+          <tr>
+            <td valign="top">
+              <select
+                name="product"
+                size="3"
+                onChange="p=Number(form1.product.value)"
+              >
+                <option value="1">Молоко (25 грн)</option>
+                <option value="2">Хліб (15 грн)</option>
+                <option value="3">Яйця (20 грн)</option>
+              </select>
+            </td>
+            <td valign="top">
+              <select name="amount" size="5" onChange="summury()">
+                <option value="1">-1-</option>
+                <option value="2">-2-</option>
+                <option value="3">-3-</option>
+                <option value="4">-4-</option>
+                <option value="5">-5-</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="text" name="res" />
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          <input
+            type="button"
+            value="Розрахувати"
+            onClick="form1.res.value=sum"
+          /><input type="button" value="Скасувати" onClick="sum=0" />
+        </p>
+      </FORM>
+    </CENTER>
+  </BODY>
+</HTML>

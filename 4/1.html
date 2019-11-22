@@ -1,0 +1,49 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <TITLE>4_2</TITLE>
+    <script>
+      function change(obj) {
+        var num = Number(obj.num.value);
+        var temp = document.images[num - 1].src;
+        document.images[num - 1].src = document.images[2].src;
+        document.images[2].src = temp;
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="1.html">4 lab</a></li>
+    <li><a href="../5/1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">4_2</a></li>
+    <li><a href="2.html">4_3</a></li>
+    <li><a href="3.html">4_4</a></li>
+  </ul>
+  <BODY class="bodi">
+    Написати сценарій вибору із трьох зображень одного, яке вставляється нижче
+    цих трьох. <br /><br />
+    <IMG src="p1.jpg" width="200" name="1" alt="pic1" /><br />
+    <IMG src="p2.jpg" width="200" name="2" alt="pic2" /><br />
+    <IMG src="p3.jpg" width="200" name="3" alt="pic3" /> <br />
+    <FORM name="form1">
+      Введіть номер зображення: <input type="text" name="num" size="4" /><br />
+      <input
+        type="button"
+        value="Переставити зображення"
+        onClick="change(form1)"
+      />
+    </FORM>
+  </BODY>
+</HTML>

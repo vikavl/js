@@ -1,0 +1,58 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../main.css" />
+    <TITLE>5_3</TITLE>
+    <script>
+      function anketa(obj) {
+        if (obj.fv.value == 1) {
+          alert(
+            "Ви - " +
+              obj.sex.value +
+              ", вам " +
+              obj.age.value +
+              " років і ви - одружений(-а)!"
+          );
+        } else {
+          alert(
+            "Ви - " +
+              obj.sex.value +
+              ", вам " +
+              obj.age.value +
+              " років і ви - неодружений(-а)!"
+          );
+        }
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">5_2</a></li>
+    <li><a href="2.html">5_3</a></li>
+  </ul>
+  <BODY class="bodi">
+    <FORM name="form1">
+      Розробити анкету, що визначає стать, вік, сімейне положення особи, і
+      передає ці дані в скрипт. <br /><br />
+      Стать: <input type="text" name="sex" size="8" /><br />
+      Вік: <input type="text" name="age" size="8" /><br />
+      Сімейне положення:<br>
+      <input type="radio" name="fv" value="1" />Одружений(-а)<br />
+      <input type="radio" name="fv" value="2" />Неодружений(-а)<br /><br />
+      <input type="button" value="Обрахувати данні" onClick="anketa(form1)" />
+    </FORM>
+  </BODY>
+</HTML>

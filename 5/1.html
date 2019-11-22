@@ -1,0 +1,67 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>5_2</TITLE>
+    <link rel="stylesheet" href="../main.css" />
+    <script>
+      function change(a) {
+        var x = Number(a);
+        if (a == 1) {
+          document.getElementById("pol").style.width = "50%";
+        }
+        if (a == 2) {
+          document.getElementById("pol").style.marginTop = "25%";
+          if (document.getElementById("pol").style.width == "50%")
+            document.getElementById("pol").style.marginLeft = "25%";
+        }
+        if (a == 3) {
+          document.getElementById("pol").style.marginTop = "35%";
+          if (document.getElementById("pol").style.width == "50%")
+            document.getElementById("pol").style.marginLeft = "25%";
+        }
+        if (a == 4) {
+          document.getElementById("pol").style.marginTop = "0%";
+          if (document.getElementById("pol").style.width == "50%")
+            document.getElementById("pol").style.marginLeft = "25%";
+        }
+        if (a == 5) {
+          document.getElementById("pol").style.marginTop = "10%";
+          document.getElementById("pol").style.width = "98%";
+          document.getElementById("pol").style.marginLeft = "0%";
+        }
+      }
+    </script>
+  </HEAD>
+  <ul class="menu">
+    <li><a href="../1/1.html">1 lab</a></li>
+    <li><a href="../2/1.html">2 lab</a></li>
+    <li><a href="../3/1.html">3 lab</a></li>
+    <li><a href="../4/1.html">4 lab</a></li>
+    <li><a href="1.html">5 lab</a></li>
+    <li><a href="../6/1.html">6 lab</a></li>
+    <li><a href="../7/1.html">7 lab</a></li>
+    <li><a href="../8/1.html">8 lab</a></li>
+    <li><a href="../10/1.html">9 lab</a></li>
+    <li><a href="../10_B/1.html">10 lab</a></li>
+    <li><a href="../11/1.html">11 lab</a></li>
+    <li><a href="../12/1.html">12 lab</a></li>
+  </ul>
+  <ul class="menu-menu">
+    <li><a href="1.html">5_2</a></li>
+    <li><a href="2.html">5_3</a></li>
+  </ul>
+  <BODY class="bodi">
+    <form name="form1">
+      <input type="radio" name="fv" onClick="change(1)" /> Зменшити лінію
+      наполовину <br />
+      <input type="radio" name="fv" onClick="change(2)" /> Центральне лінії
+      положення <br />
+      <input type="radio" name="fv" onClick="change(3)" /> Положення лінії внизу
+      <br />
+      <input type="radio" name="fv" onClick="change(4)" /> Положення лінї зверху
+      <br />
+      <input type="reset" value="Очистити" onClick="change(5)" />
+    </form>
+    <hr id="pol" />
+  </BODY>
+</HTML>
